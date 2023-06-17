@@ -1,0 +1,27 @@
+*{
+    font-family: 'Glory';
+    box-sizing: border-box;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(9,minmax(10px,60px));
+    column-gap: 0px;
+}
+
+#board input{
+    
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgb(255,80,200);
+    /* padding: 3rem; */
+    text-align: center;
+    margin: 1px;
+    border: 1px solid  rgb(100,100,100);
+}
+
+.color{
+    background: rgb(224, 210, 210);
+}

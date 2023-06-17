@@ -1,0 +1,245 @@
+//## Colors
+
+//### Primary
+
+$BrightBlue: hsl(220, 98%, 61%);
+$CheckBackground: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+
+//### Neutral
+
+//### Light Theme
+
+$VeryLightGray: hsl(0, 0%, 98%);
+$VeryLightGrayishBlue: hsl(236, 33%, 92%);
+$LightGrayishBlue: hsl(233, 11%, 84%);
+$DarkGrayishBlue: hsl(236, 9%, 61%);
+$VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+//### Dark Theme
+
+$VeryDarkBlue: hsl(235, 21%, 11%);
+$VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+$LightGrayishBlue: hsl(234, 39%, 85%);
+$LightGrayishBlue: hsl(236, 33%, 92%);
+$DarkGrayishBlue: hsl(234, 11%, 52%);
+$VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+$VeryDarkGrayishBlue: hsl(240, 1%, 85%);
+
+$top-img: url('/src/img/bg-mobile-dark.jpg');
+$tgl-btn: url("/src/img/icon-sun.svg");
+
+
+* {
+  font-family: "Glory Medium";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $VeryDarkBlue;
+}
+
+//light styles
+.light {
+  background-color: $LightGrayishBlue;
+  $top-img: url('/src/img/bg-mobile-light.jpg');
+  $tgl-btn: url("/src/img/icon-moon.svg");
+
+  .top-img {
+    background-image: $top-img;
+  }
+
+  .tgl-btn {
+    background-image: $tgl-btn;
+  }
+
+  .type-todo {
+    background-color: #E4E5F1;
+
+    .circle {
+      border: 1px solid $VeryDarkBlue;
+    }
+
+    #todo-input {
+      color: $DarkGrayishBlue;
+    }
+  }
+  .todo-container{
+    background-color: transparent;
+    border-radius: 20px;
+  }
+  .todo{
+    margin: 10px 0px;
+    background-color: $VeryDarkGrayishBlue;
+    border-radius: 10px;
+    color: #161722;
+    font-weight: bold;
+  }
+  .remarks{
+    $CheckBackground : linear-gradient(45deg, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+    background-image: $CheckBackground;
+  }
+}
+
+.top-img {
+  width: 100%;
+  height: 225px;
+  background-size: cover;
+  background-image: $top-img;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 25px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    letter-spacing: 10px;
+    padding-top: 10px;
+  }
+
+  .tgl-btn {
+    background: $tgl-btn;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+  }
+}
+
+.type-todo {
+  margin-top: 24px;
+  padding: 10px;
+  height: 55px;
+  width: 100%;
+  background: $VeryDarkBlue;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  align-items: center;
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $VeryLightGray;
+  }
+
+  #todo-input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border: none;
+    color: $VeryLightGrayishBlue;
+    caret-color: $BrightBlue;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.todo-container {
+  margin-top: 24px;
+  background-color: $VeryDarkGrayishBlue;
+}
+
+.todo {
+  width: 100%;
+  height: 55px;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+
+  & input[type='checkbox'] {
+    cursor: pointer;
+    display: none;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $VeryLightGray;
+
+
+  &.active {
+    position: relative;
+    background-image: $CheckBackground;
+
+    &::before {
+      color: #000;
+      content: '✔';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+
+    }
+  }
+  }
+}
+
+
+.remarks{
+  position: relative;
+  color: #E4E5F1;
+  background-color: $VeryDarkDesaturatedBlue ;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div{
+    padding: 0 10px;
+  }
+  .filters{
+    color: $VeryDarkDesaturatedBlue;
+    background-color: $VeryLightGray;
+    height: 55px;
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    div{
+      cursor: pointer;
+    }
+  }
+  #clear-btn:hover{
+  color: $BrightBlue;
+    cursor: pointer;
+  }
+}
+
+.filterActive{
+  font-weight: bold;
+  font-size: 2rem;
+  color: #57DDFF;
+}
+
+@media screen and (min-width: 800px) {
+  .remarks , .header, .type-todo{
+    width: 60%;
+    margin: 20px auto;
+  }
+
+  .todo-container{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo{
+    width: 100%;
+  }
+}

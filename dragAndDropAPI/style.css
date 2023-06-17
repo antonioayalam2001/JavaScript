@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+.container .dragZone {
+  margin: 1rem;
+  max-width: 800px;
+  padding: 4rem;
+  border: 3px dotted white;
+  position: relative;
+}
+.container .dragZone::after {
+  content: "Let over here";
+  color: white;
+  font-family: "Glory", "SansSerif", serif;
+  font-size: 1.4rem;
+  top: 0;
+  transform: translate(100%, 100%);
+  position: absolute;
+}
+
+figure {
+  border: 1px solid white;
+  max-width: 450px;
+}
+figure img {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#hijo1 {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */

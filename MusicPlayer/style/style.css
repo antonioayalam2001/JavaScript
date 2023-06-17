@@ -1,0 +1,140 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Glory';
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background: white;
+}
+
+.player {
+  max-width: 760px;
+  min-width: 320px;
+  background: -webkit-gradient(linear, left top, left bottom, from(pink), to(white));
+  background: linear-gradient(to bottom, pink, white);
+  border: 1px solid #b4b2b2;
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 3px 4px 14px #000;
+          box-shadow: 3px 4px 14px #000;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  -webkit-text-stroke: #000 0.4px;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+}
+
+.cover {
+  width: 178px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.cover img {
+  width: 100%;
+  border-radius: 1.4rem;
+}
+
+.duration__display {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.duration__display span:last-child {
+  font-weight: bolder;
+}
+
+.progress_container {
+  height: 0.3rem;
+  background: #91d4f8;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.progress_container .progress {
+  background-color: #a36464;
+  height: 100%;
+  width: 0%;
+  position: relative;
+}
+
+.progress_container::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 10px;
+  border-radius: 100%;
+  width: 10px;
+  right: 50%;
+}
+
+.controls {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.controls button {
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #f5a6b3;
+  border: 1px solid #cdcdff;
+  -webkit-box-shadow: 1px 0px 3px black;
+          box-shadow: 1px 0px 3px black;
+  outline: none;
+  -webkit-transition: all;
+  transition: all;
+}
+
+.controls button:active {
+  background: #000;
+}
+
+.song_list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.song_list li {
+  margin-bottom: 1rem;
+}
+
+.song_list li a {
+  text-decoration: none;
+  color: #db6175;
+}
+
+.song_list li .activo {
+  font-weight: bold;
+  color: #000;
+}
+/*# sourceMappingURL=style.css.map */

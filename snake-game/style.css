@@ -1,0 +1,25 @@
+*{
+    font-family: 'Glory';
+    /* box-sizing: border-box; */
+}
+
+.grid{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: solid;
+}
+
+.grid div{
+    width: 20px;
+    height: 20px;
+}
+
+.snake{
+    background-color: pink;
+}
+
+.apple{
+    background-color: rgb(125,100,200);
+}

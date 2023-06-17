@@ -1,0 +1,12 @@
+.grid{
+    display: grid;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+	grid-template-columns: repeat(3,minmax(10rem,20rem));
+
+}
+
+.card {
+    margin: 1rem;
+}
+

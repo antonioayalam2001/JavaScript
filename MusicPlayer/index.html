@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- Player -->
+
+    <div class="player">
+        <!-- Title -->
+        <h1 class="title">Selecciona una Rola</h1>
+        
+        <!-- Cover -->
+        <figure class="cover"><img id="cover" src="" alt=""></figure>
+
+        <audio id="audio" src=""></audio>
+        
+        <!-- Totl durarion -->
+        <div class="duration__display">
+            <span id="duration">20</span>
+            <span id="total_duration">39</span>
+        </div>
+        <!-- Progress Container -->
+        <div id="progress_container" class="progress_container">
+            <section id="progress" class="progress">
+            </section>
+        </div>
+
+        <!-- Controls -->
+        <section class="controls">
+            <button  class="prev">
+                <em id="prev" class="fas fa-backward"></em>
+            </button>
+            <button  class="play">
+                <em id="play" class="fas fa-play"></em>
+            </button>
+            <button  class="next">
+                <em id="next" class="fas fa-forward"></em>
+            </button>
+        </section>
+
+        
+
+        <!-- Song List -->
+        <!-- Se agregaron dinamicamente en JavaScript -->
+        <ul class="song_list">
+            <!-- <li><a href="#" class="activo">Song1</a></li>
+            <li><a href="#">song2</a></li>
+            <li><a href="#">song3</a></li> -->
+        </ul>
+
+
+    </div>
+    
+  </body>
+  <script src="app.js"></script>
+</html>

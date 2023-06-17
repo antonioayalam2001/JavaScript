@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="loopstudios-landing-page-main">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/landingPage/objective/loopstudios-landing-page-main.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
